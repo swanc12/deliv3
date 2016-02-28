@@ -1,0 +1,96 @@
+As an unregistered user
+I would like to register an account
+So that I can become a member of NeoGAF
+
+Scenarios:
+Given I am on the home page for NeoGAF,
+then a registration button should exist.
+
+Given a registration button exists,
+when I click the registration button,
+then I should be on the date of birth page.
+
+Given I am on the date of birth page,
+when I click the select element for "Month",
+and I choose a month,
+then the chosen month should be indicated as selected.
+
+Given I am on the date of birth page,
+when I click the select element for "Day",
+and I choose a day,
+then the chosen day should be indicated as selected.
+
+Given I am on the date of birth page,
+when I click the input element for "Year",
+and I enter my year of birth,
+then the input box for year should contain my year of birth.
+
+Given I have entered my date of birth
+when I click the Proceed button
+then I should be sent to the Forum Rules Agreement Page
+
+Given I am on the Forum Rules Agreement Page,
+and I have not checked the "I have read, and agree to abide by the NeoGAF rules." box,
+when I click "Register",
+then a message declining my registration should appear.
+
+
+Given I am on the Forum Rules Agreement Page,
+and I have checked the "I have read, and agree to abide by the NeoGAF rules." box,
+when I click "Register",
+then I should be sent to the Registration page.
+~~~
+
+As a user
+I would like to see activity statistics on the home page
+So that I know how active the community is.
+
+Given I am on the homepage
+then the forum-stats-bits element exists.
+
+Given I am on the homepage
+and the forum-stats-bits element exists
+then the threads variable should exist inside the forum-stats-bits element.
+
+Given I am on the homepage
+and the forum-stats-bits element exists
+then the posts variable should exist inside the forum-stats-bits element.
+
+Given I am on the homepage
+and the forum-stats-bits element exists
+then the members variable should exist inside the forum-stats-bits element.
+~~~
+
+As a user
+I would like to be able to open the most recent post in a sub-forum
+So that I can keep up with current discussions amongst the community.
+
+Given I am on the homepage
+when I click the button for the most recent Gaming Discussion post
+then I should be sent to a thread in the Gaming or Gaming Community sub-forum.
+
+Given I am on the homepage
+when I click the button for the most recent Off-Topic Discussion post
+Then I should be sent to a thread in the Off-Topic or Off-Topic Community sub-forum.
+
+~~~
+As a user
+I would like to view the terms of service for NeoGAF
+So that I can learn about the membership process and how I can avoid getting myself banned.
+
+Given I am on the homepage
+When I click the TOS button
+Then I should be taken to the TOS forum post.
+
+Given I am within the Gaming Discussion sub-forum
+When I click the TOS button
+Then I should be taken to the TOS forum post.
+
+Given I am within the Off-Topic Discussion Sub-Forum
+When I click the TOS button
+Then I should be taken to the TOS forum post.
+
+Given I am on the most recent Gaming Discussion forum post
+when I click the TOS button
+Then I should be taken to the TOS forum post.
+
