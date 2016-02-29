@@ -198,6 +198,37 @@ public class RegisterTest{
 		driver.quit();	
 		
 	}
+	
+	/*
+	 * Given I am on the Registration page
+	 * and no information has been filled out
+	 * when I click "Complete Registration"
+	 * then a message should appear indicating that I must fill out the password fields.
+	 */
+	@Test
+	public void testRegisterPageEmptyAlert(){
+		WebDriver driver = new FirefoxDriver();
+		driver.get("http://www.neogaf.com/forum/register.php");
+		Select month = new Select(driver.findElement(By.name("month")));
+		month.selectByVisibleText("April");
+		Select day = new Select(driver.findElement(By.name("day")));
+		day.selectByVisibleText("1");
+		WebElement year = driver.findElement(By.name("year"));
+		year.click();
+		year.sendKeys(("1990"));
+		WebElement e = driver.findElement(By.xpath("//input[(@value=' Proceed ') and  (@class='button')]"));
+		e.click();
+		e = driver.findElement(By.id("cb_rules_agree"));
+		e.click();
+		e = driver.findElement(By.xpath("//input[(@value='Register') and  (@class='button')]"));
+		e.click();
+		e = driver.findElement(By.xpath("//input[(@value='Complete Registration') and  (@class='button')]"));
+		e.click();
+		String currString = driver.switchTo().alert().getText();
+		assertEquals("Please fill out both password fields.", currString);
+		driver.quit();	
+		
+	}
 }
 
 
