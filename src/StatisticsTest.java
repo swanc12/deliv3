@@ -1,8 +1,7 @@
-package deliv3;
 /*
- * User Story: As an unregistered user
- * I would like to register an account
- * so that I can become a member of NeoGAF.
+ * User Story: As a user
+ * I would like to see activity statistics on the home page
+ * So that I know how active the community is.
  * 
  * Author: Colin Swan
  */
@@ -19,7 +18,7 @@ import org.junit.Test;
 public class StatisticsTest{
 	/*
 	 * Given I am on the homepage
-	 * then the forum-stats-bits element exists and is displayed.
+	 * then the forum statistics should be displayed
 	 */
 	@Test
 	public void testStatsElementDisplayed(){
@@ -32,8 +31,8 @@ public class StatisticsTest{
 	
 	/*
 	 * Given I am on the homepage
-	 * and the forum-stats-bits element exists
-	 * then the threads variable should exist inside the forum-stats-bits element.
+	 * and the forum statistics are displayed
+	 * then the number of threads should be displayed in the statistics display
 	 */
 	@Test
 	public void testStatsThreads(){
@@ -53,8 +52,8 @@ public class StatisticsTest{
 	
 	/*
 	 * Given I am on the homepage
-	 * and the forum-stats-bits element exists
-	 * then the posts variable should exist inside the forum-stats-bits element.
+	 * and the forum statistics are displayed
+	 * then the number of posts should be displayed in the statistics display
 	 */
 	@Test
 	public void testStatsPosts(){
@@ -74,8 +73,8 @@ public class StatisticsTest{
 	
 	/*
 	 * Given I am on the homepage
-	 * and the forum-stats-bits element exists
-	 * then the members variable should exist inside the forum-stats-bits element.
+	 * and the statistics are displayed
+	 * then the number of members should be displayed in the statistics display.
 	 */
 	@Test
 	public void testStatsMembers(){

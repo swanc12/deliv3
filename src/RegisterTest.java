@@ -173,7 +173,7 @@ public class RegisterTest{
 	/*
 	 * Given I am on the Forum Rules Agreement Page,
 	 * and I have checked the "I have read, and agree to abide by the NeoGAF rules." box,
-	 * when I click "Register",\
+	 * when I click "Register",
 	 * then I should be sent to the Registration page.
 	 */
 	@Test
