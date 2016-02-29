@@ -21,9 +21,14 @@ and I choose a day,
 then the chosen day should be indicated as selected.
 
 Given I am on the date of birth page,
-when I click the input element for "Year",
-and I enter my year of birth,
-then the input box for year should contain my year of birth.
+and the "Month", "Day", and "Year" fields are empty,
+when I click "proceed"
+then a message asking to enter a month appears.
+
+Given I am on the date of birth page,
+and the "Day" and "Year" fields are empty,
+when I click "proceed"
+then a message asking to enter a day appears.
 
 Given I have entered my date of birth
 when I click the Proceed button
